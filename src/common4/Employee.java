@@ -1,13 +1,13 @@
-package common2;
+package common4;
 
 import java.util.*;
 
-public class Employee2 {
+public class Employee {
     private String lastName;
     private String firstName;
     private String ssn;
 
-    public Employee2(String lastName, String firstName, String ssn) {
+    public Employee(String lastName, String firstName, String ssn) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.ssn = ssn;
@@ -15,7 +15,7 @@ public class Employee2 {
 
     @Override
     public String toString() {
-        return "Employee2{" + "ssn=" + ssn + '}';
+        return "Employee{" + "Employee Name: " + lastName + ", " + firstName + "; SSN: " + ssn + '}';
     }
 
     /**
@@ -38,7 +38,7 @@ public class Employee2 {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Employee2 other = (Employee2) obj;
+        final Employee other = (Employee) obj;
         if (!Objects.equals(this.ssn, other.ssn)) {
             return false;
         }

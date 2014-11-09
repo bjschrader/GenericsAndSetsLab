@@ -2,12 +2,12 @@ package common1;
 
 import java.util.*;
 
-public class Employee1 {
+public class Employee {
     private String lastName;
     private String firstName;
     private String ssn;
 
-    public Employee1(String lastName, String firstName, String ssn) {
+    public Employee(String lastName, String firstName, String ssn) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.ssn = ssn;
@@ -38,7 +38,7 @@ public class Employee1 {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Employee1 other = (Employee1) obj;
+        final Employee other = (Employee) obj;
         if (!Objects.equals(this.ssn, other.ssn)) {
             return false;
         }
