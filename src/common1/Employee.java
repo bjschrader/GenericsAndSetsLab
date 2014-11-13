@@ -20,7 +20,7 @@ public class Employee {
 
     /**
      *
-     * @ovverride hashCode and equals must be done here to remove blind
+     * @Override hashCode and equals must be done here to remove blind
      * inheritance
      */
     @Override

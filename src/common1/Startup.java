@@ -8,6 +8,39 @@ import java.util.Set;
 public class Startup {
 
     public static void main(String[] args) {
+        List employeeList = new ArrayList();
+        Employee emp1 = new Employee("Roberts", "Rob", "123-45-6789");
+        Employee emp2 = new Employee("Johnson", "John", "123-45-6789");
+        Employee emp3 = new Employee("Philbert", "Phil", "333-33-3333");
+        Employee emp4 = new Employee("James", "Jim", "444-44-4444");
+        
+        employeeList.add(emp1);
+        employeeList.add(emp2);
+        employeeList.add(emp3);
+        employeeList.add(emp4);
+        
+        System.out.println("The size of the employee list is: " + employeeList.size());
+        Employee thisEmployee = (Employee)employeeList.get(1);
+        
+        System.out.println("The 2nd employee in the list is:" + thisEmployee.toString());
+        
+        System.out.println("All employees:");
+        for (int i = 0; i < employeeList.size(); i++){
+            System.out.println(employeeList.get(i));
+        }
+        
+        employeeList.remove(1);
+        System.out.println("Remove 2nd empoyee.");
+        for (Object employeeList1 : employeeList) {
+            System.out.println(employeeList1);
+        }
+        
+        employeeList.clear();
+        System.out.println("Clear employee list.");
+        employeeList.stream().forEach((employeeList1) -> {
+            System.out.println(employeeList1);
+        });
+        
 //        Address a1 = new Address("1234 Street", "Milwaukee", "222-222-2222");
 //        Address a2 = new Address("0234 Street", "Milwaukee", "222-222-2222");
 //        Address a3 = new Address("9234 Street", "Milwaukee", "222-222-2222");

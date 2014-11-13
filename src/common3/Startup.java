@@ -9,7 +9,7 @@ public class Startup {
     public static void main(String[] args) {
         
         
-        List employeeList = new ArrayList();
+        List <Employee> employeeList = new ArrayList<>();
         Employee emp1 = new Employee("Roberts", "Rob", "123-45-6789");
         Employee emp2 = new Employee("Johnson", "John", "123-45-6789");
         Employee emp3 = new Employee("Philbert", "Phil", "333-33-3333");
@@ -20,16 +20,30 @@ public class Startup {
         employeeList.add(emp3);
         employeeList.add(emp4);
         
-        System.out.println("The size of the employee list is: " + employeeList.size());
-        Employee thisEmployee = (Employee)employeeList.get(1);
+        //Retrieve and display the size of the list.
+        System.out.println("The size of the employee list is: " 
+                + employeeList.size());
+        Employee thisEmployee = employeeList.get(1);
         
-        System.out.println("The 2nd employee in the list is:" + thisEmployee.toString());
+        //Retrieve the 2nd item in the list and store it in a variable of 
+        //type Employee.
+        System.out.println("The 2nd employee in the list is:" 
+                + thisEmployee.toString());
         
+        //Create an old style for loop with counter variable and output all 
+        //items to the console. New for each loop.
         System.out.println("All employees:");
-        for (int i = 0; i < employeeList.size(); i++){
-            System.out.println(employeeList.get(i));
-        }
+        for(Employee emp : employeeList)
+            System.out.println(emp);
+//        for (int i = 0; i < employeeList.size(); i++){
+//            System.out.println(employeeList.get(i));
+//        }
         
+        //Generified and removes duplicates
+        Set<Employee> removeDupes = new HashSet<>();
+        employeeList = new ArrayList<>(removeDupes);
+        
+        //Experiment with at least two other operations on a List.
         employeeList.remove(1);
         System.out.println("Remove 2nd empoyee.");
         for (Object employeeList1 : employeeList) {

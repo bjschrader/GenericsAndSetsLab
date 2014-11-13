@@ -3,9 +3,7 @@ package common2;
 import java.util.*;
 
 public class Startup {
-    
-    
-
+  
     public static void main(String[] args) {
         
         
@@ -20,16 +18,25 @@ public class Startup {
         employeeList.add(emp3);
         employeeList.add(emp4);
         
-        System.out.println("The size of the employee list is: " + employeeList.size());
+        //Retrieve and display the size of the list.
+        //Verify that a cast is necessary.
+        System.out.println("The size of the employee list is: " 
+                + employeeList.size());
         Employee thisEmployee = (Employee)employeeList.get(1);
         
-        System.out.println("The 2nd employee in the list is:" + thisEmployee.toString());
+        //Retrieve the 2nd item in the list and store it in a variable of 
+        //type Employee.
+        System.out.println("The 2nd employee in the list is:" 
+                + thisEmployee.toString());
         
+        //Create an old style for loop with counter variable and output all 
+        //items to the console.
         System.out.println("All employees:");
         for (int i = 0; i < employeeList.size(); i++){
             System.out.println(employeeList.get(i));
         }
         
+        //Experiment with at least two other operations on a List.
         employeeList.remove(1);
         System.out.println("Remove 2nd empoyee.");
         for (Object employeeList1 : employeeList) {
